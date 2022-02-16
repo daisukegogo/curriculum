@@ -1,0 +1,19 @@
+body {
+    background: #696969;
+    text-align: center;
+    padding:100px 0;
+    color: #FFFF;
+  }
+
+h1 {
+    vertical-align:-20%;
+    margin: 0 20px;
+}
+
+
+
+hr {
+    border-width: 3px 0px 0px 0px; /* 太さ */
+    border-style: solid; /* 線種 */
+    height: 50px;         /* 高さ(※古いIE用) */
+ }
