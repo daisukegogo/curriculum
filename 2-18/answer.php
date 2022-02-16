@@ -5,10 +5,9 @@ $myname = $_POST['myname'];
 $portnumber = $_POST['port_number'];
 $uselanguage = $_POST['use_language'];
 $sqlcomand = $_POST['sql_comand'];
-
-$portnumber_answer = 22;
-$uselanguage_answer = 'PHP';
-$sqlcomand_answer = 'update';
+$portnumber_answer = $_POST['portnumber_answer'];
+$uselanguage_answer = $_POST['uselanguage_answer'];
+$sqlcomand_answer = $_POST['sqlcomand_answer'];
 
 function question_judge($user_answer, $answer) {
     if($user_answer == $answer){

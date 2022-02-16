@@ -7,6 +7,10 @@ $port_number = [80,22,20,21];
 $use_language = ['PHP','Python','JAVA','HTML'];
 $sql_comand = ['join','select','insert','update'];
 
+$portnumber_answer = $port_number[1];
+$uselanguage_answer = $use_language[2];
+$sqlcomand_answer = $sql_comand[0];
+
 ?>
 <html>
     <head>
@@ -19,6 +23,9 @@ $sql_comand = ['join','select','insert','update'];
         <form action="answer.php" method="post">
             <!-- 画面には表示しない -->
             <input type="hidden" name="myname" value="<?php echo $myname; ?>">
+            <input type="hidden" name="portnumber_answer" value="<?php echo $portnumber_answer; ?>">
+            <input type="hidden" name="uselanguage_answer" value="<?php echo $uselanguage_answer; ?>">
+            <input type="hidden" name="sqlcomand_answer" value="<?php echo $sqlcomand_answer; ?>">
 
             <h2>①ネットワークのポート番号は何番？</h2>
             <!--③ 問題のradioボタンを「foreach」を使って作成する-->
