@@ -1,72 +1,81 @@
+.wrapper {
+	width: 600px;
+	margin: 0;
+}
+
 .header {
-    height: 100px;
-    width:  400px;
-    background-color: #141f40;
+	height: 100px;
+    width: 400px;
+	background: #141f40;
 }
 
-.right {
-    height: 250px;
-    width:  250px;
-    float:  left;
-    background-color: #ff9e6b; 
+.side {
+	float: left;
+	width: 150px;
+	height: 250px;
+	background: #80bfa8;	
 }
 
-.box1 {
-    justify-content:center;
-    width:  150px;
-    height: 50px;
+.content {
+	float: left;
 }
 
-.box2{
-    justify-content:center;
-    width:  150px;
-    height: 100px;
+.content-top-left {
+	float: left;
 }
 
-.box3{
-    width:  250px;
-    height: 100px;
+.content-top-left-top {
+	height: 50px;
+    width: 150px;
+	background: #dbd400;
 }
 
-.box1:nth-child(1) {
-    background-color:  #dbd400; /* 背景色指定 */
-  }
-
-.box2:nth-child(2) {
-    background-color:  #0093b7; /* 背景色指定 */
+.content-top-left-bottom {
+	height: 100px;
+    width: 150px;
+	background: #0093b7;
 }
 
-.box3:nth-child(3) {
-    background-color: #8c2727; /* 背景色指定 */   
+.content-top-right {
+	float: right;
+	width: 100px;
+	height: 150px;
+	background: #ff9e6b;
 }
 
-.left {
-    height: 250px;
-    width:  150px; 
-    float:  left;
-    background-color: #80bfa8;
-}
+.content-bottom {
+    float: left;
+	height: 100px;
+    width: 250px;
+	background: #8c2727;
+}	
 
 .footer {
-    height: 100px;
-    width:  400px;
-    background-color: #d98d30;
+	height: 100px;
+    width: 400px;
+	background: #d98d30;
 }
 
-.clearfix::after { 
-    content: '';
-    display: block; 
-    clear: both;
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 @media screen and (max-width: 767px) {
     .header {
         width: 300px;
     }
-    .right {
-        width: 200px; 
+    .content-top-left {
+        width: 125px;
     }
-    .left {
+    .content-top-right {
+        width: 75px;
+    }
+    .content-bottom {
+        width: 200px;
+    }
+    .side {
         width: 100px; 
     }
     .footer {
@@ -78,14 +87,25 @@
     .header {
         width: 150px;
     }
-    .right {
+    
+    .content-top-left {
+        float: none; /* 要素の浮動化の解除 */
+    }
+
+    .content-top-right {
         float: none; /* 要素の浮動化の解除 */
         width: 150px;
     }
-    .left {
+
+    .side {
         float: none; /* 要素の浮動化の解除 */
         width: 150px;
     }
+
+    .content-bottom {
+        width: 150px;
+    }	
+
     .footer {
         width: 150px;
     }
