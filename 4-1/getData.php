@@ -1,0 +1,39 @@
+<?php
+// 外部ファイルを取り込む→関数db_connect()が使用可能
+// 作成したdbconnect.phpを読み込む
+require_once("dbconnect.php");
+
+class getData{
+
+    public $pdo;
+    public $data;
+
+    //コンストラクタ
+    function __construct()  {
+        $this->pdo = db_connect();
+    }
+
+    /**
+     * ユーザ情報の取得
+     *
+     * @param 
+     * @return array $users_data ユーザ情報(配列)
+     */
+    public function getUserData(){
+        $getusers_sql = "SELECT * FROM users limit 1";
+        $users_data = $this->pdo->query($getusers_sql)->fetch(PDO::FETCH_ASSOC);
+        return $users_data;
+    }
+    
+    /**
+     * 記事情報の取得
+     *
+     * @param 
+     * @return array $post_data 記事情報
+     */
+    public function getPostData(){
+        $getposts_sql = "SELECT * FROM posts ORDER BY id desc";
+        $post_data = $this->pdo->query($getposts_sql);
+        return $post_data;
+    }
+}
