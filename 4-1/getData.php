@@ -1,6 +1,4 @@
 <?php
-// 外部ファイルを取り込む→関数db_connect()が使用可能
-// 作成したdbconnect.phpを読み込む
 require_once("dbconnect.php");
 
 class getData{

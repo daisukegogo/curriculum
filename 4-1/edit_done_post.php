@@ -1,20 +1,26 @@
 <?php
-// 外部ファイルを取り込む→関数db_connect()が使用可能
-// 作成したdbconnect.phpを読み込む
 require_once("dbconnect.php");
+require_once("function.php");
 
 // セッション開始
 session_start();
+
 // セッション変数にuser_nameの値がなければlogin.phpにリダイレクト
-if (empty($_SESSION["user_name"])) {
-    header("Location: login.php");
-    exit;
-}
+redirect_login_unless_parameter($_SESSION["user_name"]);
 
 //記事編集でPOST送信された値を取得
 $id = $_POST["id"];
 $title = $_POST["title"];
 $content = $_POST["content"];
+
+// titleとcontentの入力チェック
+if (empty($title)) {
+    echo '<script>alert("タイトルが未入力です。");</script>';
+    exit;
+} elseif (empty($content)) {
+    echo '<script>alert("コンテンツが未入力です。");</script>';
+    exit;
+}
 
 // PDOのインスタンスを取得
 $pdo = db_connect();

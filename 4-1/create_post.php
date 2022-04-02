@@ -1,15 +1,12 @@
 <?php
+require_once("dbconnect.php");
+require_once("function.php");
+
 // セッション開始
 session_start();
 
-require_once("dbconnect.php");
-//require_once("function.php");
-
 // セッション変数にuser_nameの値がなければlogin.phpにリダイレクト
-if (empty($_SESSION["user_name"])) {
-    header("Location: login.php");
-    exit;
-}
+redirect_login_unless_parameter($_SESSION["user_name"]);
 
 // 提出ボタンが押された場合
 if (!empty($_POST)) {

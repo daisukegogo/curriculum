@@ -71,7 +71,7 @@ if (!empty($_POST)) {
         <h2>ログイン画面</h2>
         <form method="post" action="">
             名前：<input type="text" name="name" size="15"><br><br>
-            パスワード：<input type="text" name="pass" size="15"><br><br>
+            パスワード：<input type="password" name="pass" size="15"><br><br>
             <input type="submit" value="ログイン">
         </form>
     </body>

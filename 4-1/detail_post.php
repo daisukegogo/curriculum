@@ -1,16 +1,12 @@
 <?php
-    // 外部ファイルを取り込む→関数db_connect()が使用可能
-    // 作成したdbconnect.phpを読み込む
     require_once("dbconnect.php");
     require_once("function.php");
 
     // セッション開始
     session_start();
+    
     // セッション変数にuser_nameの値がなければlogin.phpにリダイレクト
-    if (empty($_SESSION["user_name"])) {
-        header("Location: login.php");
-        exit;
-    }
+    redirect_login_unless_parameter($_SESSION["user_name"]);
 
     // URLの?以降で渡されるIDをキャッチ
     $id = $_GET['id'];

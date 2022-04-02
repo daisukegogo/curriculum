@@ -12,6 +12,18 @@
     }
 
     /**
+     * 引数の値が空だった場合、login.phpにリダイレクトする
+     * @param integer $param
+     * @return void
+     */
+    function redirect_login_unless_parameter($param1) {
+        if (empty($param1)) {
+            header("Location: login.php");
+            exit;
+        }
+    }
+
+    /**
      * 引数で与えられたidでpostsテーブルを検索する
      * もし対象のレコードがなければmain.phpに遷移させる
      * @param integer $id
@@ -43,7 +55,6 @@
             redirect_main_unless_parameter($row);
         }
     }
-
 ?>
 
 

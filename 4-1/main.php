@@ -1,11 +1,11 @@
 <?php
+    require_once("function.php");
+
     // セッション開始
     session_start();
+    
     // セッション変数にuser_nameの値がなければlogin.phpにリダイレクト
-    if (empty($_SESSION["user_name"])) {
-        header("Location: login.php");
-        exit;
-    }
+    redirect_login_unless_parameter($_SESSION["user_name"]);
 
     require_once("getData.php");
 
