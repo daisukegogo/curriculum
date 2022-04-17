@@ -1,0 +1,42 @@
+.botann1{
+	background-color: #0099FF;
+	color: #FFFF;
+	border-color: #0099FF;
+	position:absolute;
+	left:0px;
+}
+
+.botann2{
+	background-color: #808080;
+	color: #FFFF;
+	border-color: #808080;
+}
+
+.botann3{
+	background-color: #FF0000;
+	color: #FFFF;
+	border-color: #FF0000;
+}
+
+th {
+	background: #c0c0c0;
+	text-align:center
+}
+
+td {
+	background: #ffff;
+	text-align:center
+	
+}
+
+td, th { border: 1px #808080 solid; }
+
+.table1{
+	border-collapse:collapse;
+	width:500px;
+}
+
+.box{
+	position:relative;
+	padding:0px 0px 10px 90px;
+}

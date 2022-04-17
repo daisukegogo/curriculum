@@ -1,0 +1,25 @@
+.botann{
+	background-color: #0099FF;
+	color: #FFFF;
+	border-color: #0099FF;
+	margin-top:10px
+}
+
+.botann1{
+	background-color: #00cccc;
+	color: #FFFF;
+	border-color: #00cccc;
+	margin: 25px 0px 0px 0px;
+}
+
+.box{
+	position:relative;
+	padding:0px 0px 25px 170px;
+}
+
+h2{
+	position:absolute;
+	left:0px;
+}
+
+
