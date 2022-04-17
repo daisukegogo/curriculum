@@ -15,10 +15,11 @@ $content = $_POST["content"];
 
 // titleとcontentの入力チェック
 if (empty($title)) {
-    echo '<script>alert("タイトルが未入力です。");</script>';
-    exit;
-} elseif (empty($content)) {
-    echo '<script>alert("コンテンツが未入力です。");</script>';
+    header("Location: edit_post.php") ; 
+    exit;   
+} 
+if (empty($content)) {
+    header("Location: edit_post.php") ;
     exit;
 }
 

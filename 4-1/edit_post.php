@@ -36,7 +36,7 @@ $content = $row['content'];
             <br>
             content:<br>
             <input type="text" name="content" id="content" style="width:200px;height:100px;" value=<?php echo $content; ?>><br>
-            <input type="submit" value="submit" id="edit" name="edit">
+            <input type="submit" value="submit" >
         </form>
     </body>
 </html>
