@@ -56,18 +56,22 @@ if (!empty($_POST)) {
     <h1>本 登録画面</h1>
     <form method="POST" action="">
         <input type="text" placeholder="タイトル" name="title" size="35"><br>
-        <input type="text" placeholder="発売日" name="release_day" size="35"><br>
+        <input type="date" placeholder="発売日" name="release_day" size="35"><br>
             
         在庫数<br>
         <div class="box">
             <select name="example">
                 <option value="">選択してください</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-                <option value="35">35</option>
+                
+                <?php
+                for($i=1;$i<=100;$i++){
+                    $cnt[$i] = $i;
+                }
+
+                foreach ($cnt as $value) {
+                    echo "<option value='".$value."'>".$value."</option>";
+                } 
+                ?>
             </select>
             <br>
             <input class="botann" type="submit" value="登録" id="post" name="post" size="20">
