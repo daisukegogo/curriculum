@@ -63,15 +63,10 @@ if (!empty($_POST)) {
             <select name="example">
                 <option value="">選択してください</option>
                 
-                <?php
-                for($i=1;$i<=100;$i++){
-                    $cnt[$i] = $i;
-                }
+                <?php for($i = 1; $i <= 20; $i++){ ?>
+                    <option value="<?php echo $i * 5 ?>"><?php echo $i * 5 ?></option>
+                <?php } ?>
 
-                foreach ($cnt as $value) {
-                    echo "<option value='".$value."'>".$value."</option>";
-                } 
-                ?>
             </select>
             <br>
             <input class="botann" type="submit" value="登録" id="post" name="post" size="20">
